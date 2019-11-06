@@ -19,3 +19,11 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+notification:
+  recipients:
+  - recipient: rancher-notifications
+    notifier: c-b44lv:n-pd8jp
+  condition:
+  - Success
+  - Changed
+  - Failed
